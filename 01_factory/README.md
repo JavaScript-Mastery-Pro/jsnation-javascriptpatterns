@@ -1,3 +1,5 @@
+### Comparison
+
 Both examples achieve the same goal of processing payments through different gateways, but they use different design patterns: the first example uses a switch statement for handling different payment types, while the second example uses a factory pattern.
 
 Here's a comparison:
@@ -14,7 +16,7 @@ Here's a comparison:
 
 Overall, the second example using the factory pattern is generally considered better due to its improved readability, maintainability, and extensibility.
 
-### Benefits of Using Factory Pattern vs. Without Factory Pattern
+### Benefits
 
 #### With Factory Pattern:
 
