@@ -7,29 +7,32 @@ Both approaches achieve the same functionality, but they differ in terms of code
     - This approach uses functional programming style. Middleware functions like `isAuthenticated` are defined globally and reused across routes.
     - Session middleware and its configuration are directly instantiated and used.
     - The session store is instantiated directly within the main script.
-
-    > The code is straightforward and easy to understand
-
-    > With this approach, the memory client or any session client you'll use (e.g. Redis client and session store) will be initialized as soon as the module is loaded, which is eager initialization
-
-    > In a large application, different modules might inadvertently create multiple instances if they don't share the same module correctly
+    - **Pros**:
+      - **Simplicity**: The code is straightforward and easy to understand.
+    - **Cons**:
+      - **Eager Initialization**: The memory client or any session client you'll use (e.g. Redis client and session store) will be initialized as soon as the module is loaded, which is eager initialization.
+      - **Multiple Instances**: In a large application, different modules might inadvertently create multiple instances if they don't share the same module correctly
 
 2.  **Second Approach (Using a Class for Session Management):**
 
     - This approach utilizes object-oriented programming (OOP) principles. The session management logic is encapsulated within a class (`SessionManager`).
     - The class provides a cleaner way to manage session-related functionality by encapsulating it within a single module.
-    - Pros:
-      - Encapsulation: .
-      - Modularity: The session management logic is modularized, making it easier to maintain and test.
-    - Cons:
-      - Complexity: Introducing a class adds some complexity compared to the straightforward functional approach.
-      - Overhead: While the class-based approach provides better organization, it might introduce unnecessary overhead for smaller applications.
+    - **Pros**:
 
-    > Session-related logic is encapsulated within a class, leading to cleaner code and separation of concerns.
-    >
-    > Imagine you have a toy car. Now, encapsulation is like putting that toy car in a box with a lid on it. The car is still there, you can play with it, but you can't see all the gears, wires, and motors inside.
-    >
-    > So, when we talk about encapsulation in programming, we mean keeping things together in an organized way, so they're easier to understand and use. It's like packing your things in a suitcase when you're traveling - everything you need is in one place and you don't have to dig through everything to find it.
+      - **Encapsulation**: Session-related logic is encapsulated within a class, leading to cleaner code and separation of concerns.
+
+        Imagine you have a toy car. Now, encapsulation is like putting that toy car in a box with a lid on it. The car is still there, you can play with it, but you can't see all the gears, wires, and motors inside.
+
+        So, when we talk about encapsulation in programming, we mean keeping things together in an organized way, so they're easier to understand and use. It's like packing your things in a suitcase when you're traveling - everything you need is in one place and you don't have to dig through everything to find it.
+
+      - **Modularity**: The session management logic is modularized, making it easier to maintain and test.
+      - **Lazy Initialization**: The session store is initialized only when needed, which can be beneficial for performance.
+
+        It ensures that the instance of the class (e.g., `SessionManager`) is created only when it is first accessed. This is different from directly exporting an object, which creates the object as soon as the module is loaded.
+
+    - **Cons**:
+      - **Complexity**: Introducing a class adds some complexity compared to the straightforward functional approach.
+      - **Overhead**: While the class-based approach provides better organization, it might introduce unnecessary overhead for smaller applications.
 
 ### Which is Better?
 
