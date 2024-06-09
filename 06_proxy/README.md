@@ -1,4 +1,4 @@
-**Approach 1: Function with Caching**
+### 1. Approach using Function with Caching
 
 **Pros:**
 
@@ -12,7 +12,7 @@
 - Lack of encapsulation; cache object is exposed and accessible from anywhere in the code.
 - Limited reusability; the caching behavior is tightly coupled with the `fetchDataWithCache` function.
 
-**Approach 2: Class-based Proxy**
+### 2. Approach using Class-based Proxy
 
 **Pros:**
 
@@ -26,7 +26,7 @@
 - More complex compared to a simple function-based approach.
 - May not be as familiar to developers who are less experienced with object-oriented programming concepts.
 
-**Approach 3: Function with Closure**
+### 3. Approach using Function with Closure
 
 **Pros:**
 
@@ -40,12 +40,12 @@
 - May be less familiar to developers primarily experienced with imperative or object-oriented paradigms.
 - Lack of explicit class definitions may lead to less discoverability in larger codebases.
 
-**Which is Better?**
+### Which is Better
 
 Each approach has its own strengths and weaknesses, and the choice depends on the specific requirements and preferences of the project.
 
-- If simplicity and straightforwardness are prioritized, Approach 1 would be suitable.
-- If object-oriented principles and flexibility for extension are important, Approach 2 is a good choice.
-- If you prefer a functional approach with encapsulation and flexibility, Approach 3 provides a balance between simplicity and separation of concerns.
+- If simplicity and straightforwardness are prioritized, **Approach 1** would be suitable.
+- If object-oriented principles and flexibility for extension are important, **Approach 2** is a good choice.
+- If you prefer a functional approach with encapsulation and flexibility, **Approach 3** provides a balance between simplicity and separation of concerns.
 
-In general, Approach 2 might be preferable for larger applications where object-oriented design patterns are more familiar and applicable. However, Approach 3 offers a good compromise between simplicity and flexibility, making it suitable for a wide range of scenarios.
+In general, **Approach 2** might be preferable for larger applications where object-oriented design patterns are more familiar and applicable. However, **Approach 3** offers a good compromise between simplicity and flexibility, making it suitable for a wide range of scenarios.

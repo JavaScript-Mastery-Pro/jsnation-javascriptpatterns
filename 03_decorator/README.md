@@ -36,7 +36,7 @@
 - May be less familiar to developers not accustomed to functional programming concepts.
 - Functional programming techniques like function composition may introduce a small performance cost compared to direct method calls.
 
-### Which is better?
+### Which is Better
 
 The approach using Higher-order Functions (Approach 3) is better overall. It offers improved readability, flexibility, and extensibility compared to the other approaches.
 

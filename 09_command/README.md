@@ -1,4 +1,4 @@
-### Approach 1 using normal functions
+### 1. Approach using normal functions
 
 **Pros:**
 
@@ -11,7 +11,7 @@
 1. **Lack of Encapsulation**: The functions are not encapsulated within objects, potentially leading to a less organized codebase.
 2. **Less Reusable**: The functions are defined globally, which might not be as reusable or modular as encapsulated classes.
 
-### Approach 2 using Command Pattern (Object Oriented Programming)
+### 2. Approach using Command Pattern (Object Oriented Programming)
 
 **Pros:**
 
@@ -25,7 +25,7 @@
 2. **More Boilerplate**: The use of classes and method definitions adds more boilerplate code compared to a functional approach.
 3. **Requires OOP Knowledge**: Developers need to understand object-oriented programming concepts to work with this approach effectively.
 
-### Approach 3 using Command Pattern (Functional Programming)
+### 3. Approach using Command Pattern (Functional Programming)
 
 **Pros:**
 
@@ -38,7 +38,7 @@
 1. **Lack of Polymorphism**: While it offers encapsulation and flexibility, it doesn't provide the same level of polymorphism as classes and inheritance.
 2. **Limited Extensibility**: Adding new types of commands might require modifying existing functions rather than extending classes, potentially leading to less flexible code.
 
-### Which is Better?
+### Which is Better
 
 All three approaches have their own merits and can be suitable depending on the specific requirements and preferences of the project and development team.
 

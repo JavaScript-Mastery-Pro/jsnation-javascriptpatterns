@@ -1,4 +1,4 @@
-### Approach 1: Object Literal
+### 1. Approach using Object Literal
 
 **Pros:**
 
@@ -12,7 +12,7 @@
 2. **Mutability:** The role structure is mutable, which might lead to unintended changes.
 3. **Recursive Functions:** The `getPermissions` and `displayRoleHierarchy` functions are recursive, potentially leading to stack overflow errors for deeply nested role hierarchies.
 
-### Approach 2: Class-based
+### 2. Approach using Class-based Composition
 
 **Pros:**
 
@@ -26,7 +26,7 @@
 2. **Mutability:** Similar to Approach 1, it allows mutability which can lead to unintended changes.
 3. **Potential Tight Coupling:** Depending on how it's implemented, there might be tight coupling between roles, which reduces flexibility.
 
-### Approach 3: Functional Programming
+### 3. Approach using Functional Programming Composition
 
 **Pros:**
 
@@ -40,14 +40,14 @@
 2. **Less Familiarity:** Developers more accustomed to object-oriented programming might find this approach less intuitive.
 3. **Performance Concerns:** Recursive functions like `getPermissions` might be less performant for deeply nested role hierarchies compared to iterative solutions.
 
-### Which Approach is Better?
+### Which is Better
 
 Each approach has its own strengths and weaknesses, and the choice depends on factors like team expertise, project requirements, and scalability.
 
-For a project where simplicity and flexibility are key, Approach 3 (Functional Programming) might be preferable due to its emphasis on immutability and modularity. It provides a good balance between abstraction and maintainability.
+For a project where simplicity and flexibility are key, **Approach 3 (Functional Programming)** might be preferable due to its emphasis on immutability and modularity. It provides a good balance between abstraction and maintainability.
 
-However, if the project requires strong encapsulation and a clear hierarchy, Approach 2 (Class-based) might be more suitable, especially if the team is familiar with object-oriented principles.
+However, if the project requires strong encapsulation and a clear hierarchy, **Approach 2 (Class-based)** might be more suitable, especially if the team is familiar with object-oriented principles.
 
-Approach 1 (Object Literal) could be suitable for small projects or prototypes where simplicity and quick implementation are prioritized, but it might become unwieldy as the project grows in complexity.
+**Approach 1 (Object Literal)** could be suitable for small projects or prototypes where simplicity and quick implementation are prioritized, but it might become unwieldy as the project grows in complexity.
 
-Overall, I'd suggest Approach 2 (Class-based) due to its emphasis on Encapsulation, Inheritance, and Readability, which can lead to more maintainable and scalable codebases in the long run.
+Overall, I'd suggest **Approach 2 (Class-based)** due to its emphasis on Encapsulation, Inheritance, and Readability, which can lead to more maintainable and scalable codebases in the long run.

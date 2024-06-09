@@ -40,7 +40,7 @@
 - **Complexity**: Slightly more complex due to the introduction of multiple functions.
 - **Readability**: For developers more accustomed to object-oriented programming, the functional approach might be less intuitive.
 
-### Which is better
+### Which is Better
 
 For a scalable and maintainable solution, **Approach 2 (Object-Oriented Adapter Pattern)** or **Approach 3 (Functional Programming with Adapters)** are generally better choices. They both decouple the notification logic from the specific implementations and allow for easier extension and maintenance. The choice between these two largely depends on whether the team prefers an object-oriented or functional programming style.
 
